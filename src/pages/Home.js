@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SliderComp from "../home/SliderComp";
 import Shorting from "../home/Shorting";
 import Category from "../home/Category";
-import Product from "../home/Product";
+import Products from "../home/Products";
 
 function Home() {
   const [sort, setSort] = useState("");
@@ -13,7 +13,7 @@ function Home() {
       <Shorting />
       <div className="flex">
         <Category />
-        <Product />
+        <Products />
       </div>
     </div>
   );
