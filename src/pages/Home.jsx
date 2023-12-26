@@ -7,13 +7,23 @@ import Products from "../home/Products";
 function Home() {
   const [sort, setSort] = useState("");
   const [category, setCategory] = useState("");
+  const [filterTerm, setFilterTerm] = useState("");
+
+  const handleFilterChange = (value) => {
+    setFilterTerm(value);
+  };
+
   return (
     <div>
       <SliderComp />
-      <Shorting />
+      <Shorting
+        setSort={setSort}
+        handleFilterChange={handleFilterChange}
+        filterTerm={filterTerm}
+      />
       <div className="flex">
-        <Category />
-        <Products />
+        <Category setCategory={setCategory} />
+        <Products category={category} sort={sort} filterTerm={filterTerm} />
       </div>
     </div>
   );
