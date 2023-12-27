@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 const settings = {
   dots: true,
   infinite: true,
-  speed: 500,
+  speed: 1000,
   autoplay: true,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -14,9 +14,12 @@ const settings = {
 
 function App() {
   return (
-    <div className="">
+    <div
+      className="max-h-screen
+    "
+    >
       <Slider {...settings}>
-        <div className=" !flex items-center bg-gray-100">
+        <div className=" !flex items-center bg-gray-100 ">
           <div className="">
             <div className="text-6xl font-bold">Nike</div>
             <div className="text-lg my-4 ">
@@ -26,9 +29,9 @@ function App() {
               İncele
             </div>
           </div>
-          <div>
+          <div className="pl-9">
             <img
-              className="w-300 h-300 object-cover"
+              className=" w-[900px] w-[900px] object-cover pl-52 "
               src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/739af66b-1b5b-47ff-89ed-d97e90f2ccbd/air-max-sc-ayakkab%C4%B1s%C4%B1-2SwX5s.png"
             ></img>
           </div>
@@ -44,9 +47,9 @@ function App() {
               İncele
             </div>
           </div>
-          <div>
+          <div className="pl-9">
             <img
-              className="w-300 h-300 object-cover"
+              className=" w-[900px] w-[900px] object-cover pl-52 "
               src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/739af66b-1b5b-47ff-89ed-d97e90f2ccbd/air-max-sc-ayakkab%C4%B1s%C4%B1-2SwX5s.png"
             ></img>
           </div>
@@ -61,9 +64,9 @@ function App() {
               İncele
             </div>
           </div>
-          <div>
+          <div className="pl-9">
             <img
-              className="w-300 h-300 object-cover"
+              className=" w-[900px] w-[900px] object-cover pl-52 "
               src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/739af66b-1b5b-47ff-89ed-d97e90f2ccbd/air-max-sc-ayakkab%C4%B1s%C4%B1-2SwX5s.png"
             ></img>
           </div>
