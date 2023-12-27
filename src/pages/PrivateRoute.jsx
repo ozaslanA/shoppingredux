@@ -1,14 +1,20 @@
-// PrivateRoute.js
 import React from "react";
-import { Route, Navigate } from "react-router-dom";
+import { Route, useNavigate } from "react-router-dom";
 
-const PrivateRoute = ({ element: Element, ...rest }) => {
-  const isLoggedIn = !!localStorage.getItem("s11Login");
+const PrivateRoute = ({ component: Comp, ...rest }) => {
+  const navigate = useNavigate();
 
   return (
     <Route
       {...rest}
-      element={isLoggedIn ? <Element /> : <Navigate to="/login" replace />}
+      element={
+        localStorage.getItem("s11Login") ? (
+          <Comp />
+        ) : (
+          // navigate fonksiyonunu kullanarak yönlendirme yap
+          () => navigate("/login")
+        )
+      }
     />
   );
 };
