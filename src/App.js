@@ -16,7 +16,10 @@ function App() {
       <PagesContainers>
         <Navbar />
         <Routes>
-          <Route path="/login" element={<LoginForm />} />
+          <Route
+            path="/login"
+            element={isAuthenticated ? <Home /> : <LoginForm />}
+          />
           <Route path="/" element={<Home />} />
           <Route path="/products/:id" element={<Detail />} />
           <Route
